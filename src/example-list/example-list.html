@@ -1,0 +1,14 @@
+<template>
+  <div class="contact-list" css="background-color: ${color};">
+    <ul class="list-group">
+      <li
+        repeat.for="example of examples"
+        class="list-group-item ${example.id === $parent.selectedExample ? 'active' : ''}"
+      >
+        <a route-href="route.bind: example.route">
+          <h4 class="list-group-item-heading">${example.label}</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+</template>
